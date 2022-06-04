@@ -14,7 +14,19 @@
  *= require_self
  */
 
-
- * {
-    background-color: rgb(205, 240, 149);
+ *{
+    background-color: white;
  }
+
+
+ header{
+     background-color: orange;
+     color: white;
+     text-align: center;
+    text-decoration: none;
+ }
+
+ .contMenu{
+    background-color: black;
+    color: white;
+ } 

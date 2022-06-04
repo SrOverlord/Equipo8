@@ -11,9 +11,17 @@
   </head>
 
   <body>
-<%= link_to "Projects", root_path %>
-<%= link_to "Developers", :developers %>
-<%= link_to "Perros", :perros %>
+
+ <header>
+
+  <h1>Home Bank</h1>
+  <h4><i>Tu banco en casa</i></h4>
+  <div class = "contMenu">
+  <%= link_to "Projects", :projects %>
+  <%= link_to "Developers", :developers %>
+  <%= link_to "Perros", :perros %>
+  </div>
+ </header>
 
     <%= yield %>
   </body>
