@@ -25,81 +25,17 @@
   </ul>
   </div>
  </header>
- <%
- series = [
 
-   {name: "Grafica 1", data: @grafica},
-   {name: "Grafica 2", data: @grafica},
-   {name: "Grafica 3", data: @grafica},
- ] 
- %>
 
- <%
-   options = {
-     series: [{
-          name: 'XYZ MOTORS',
-          data: [30,40,35,50,49,60,70,91,125]
-        }],
-          chart: {
-          type: 'area',
-          stacked: false,
-          height: 350,
-          zoom: {
-            type: 'x',
-            enabled: true,
-            autoScaleYaxis: true
-          },
-          toolbar: {
-            autoSelected: 'zoom'
-          }
-        },
-        dataLabels: {
-          enabled: false
-        },
-        markers: {
-          size: 0,
-        },
-        title: {
-          text: 'Stock Price Movement',
-          align: 'left'
-        },
-        fill: {
-          type: 'gradient',
-          gradient: {
-            shadeIntensity: 1,
-            inverseColors: false,
-            opacityFrom: 0.5,
-            opacityTo: 0,
-            stops: [0, 90, 100]
-          },
-        },
-        yaxis: {
-          labels: {
-            formatter: function (val) {
-              return (val / 1000000).toFixed(0);
-            },
-          },
-          title: {
-            text: 'Price'
-          },
-        },
-        xaxis: {
-          type: 'datetime',
-        },
-        tooltip: {
-          shared: false,
-          y: {
-            formatter: function (val) {
-              return (val / 1000000).toFixed(0)
-            }
-          }
-        }
-        };
- %>
 
   <div class= "contGrafica">
-  <%= area_chart(series,{**options,theme:"palette1"}) %>
-  <% end %>
+ <%= pie_chart([
+  {name: "Series A", data: 25},
+  {name: "Series B", data: 100},
+  {name: "Series C", data: 200},
+  {name: "Series D", data: 125}
+], legend: "left") %>
+  </div>
   
   
    </div>
