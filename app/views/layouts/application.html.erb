@@ -25,8 +25,83 @@
   </ul>
   </div>
  </header>
+ <%
+ series = [
 
+   {name: "Grafica 1", data: @grafica},
+   {name: "Grafica 2", data: @grafica},
+   {name: "Grafica 3", data: @grafica},
+ ] 
+ %>
 
+ <%
+   var options = {
+          chart: {
+          type: 'area',
+          stacked: false,
+          height: 350,
+          zoom: {
+            type: 'x',
+            enabled: true,
+            autoScaleYaxis: true
+          },
+          toolbar: {
+            autoSelected: 'zoom'
+          }
+        },
+        dataLabels: {
+          enabled: false
+        },
+        markers: {
+          size: 0,
+        },
+        title: {
+          text: 'Stock Price Movement',
+          align: 'left'
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 1,
+            inverseColors: false,
+            opacityFrom: 0.5,
+            opacityTo: 0,
+            stops: [0, 90, 100]
+          },
+        },
+        yaxis: {
+          labels: {
+            formatter: function (val) {
+              return (val / 1000000).toFixed(0);
+            },
+          },
+          title: {
+            text: 'Price'
+          },
+        },
+        xaxis: {
+          type: 'datetime',
+        },
+        tooltip: {
+          shared: false,
+          y: {
+            formatter: function (val) {
+              return (val / 1000000).toFixed(0)
+            }
+          }
+        }
+        };
+ %>
+
+  <div class= "contGrafica">
+  <%= 
+  area_chart(series,{**options,theme:"palette1"}) do %>
+  <% x_annotation(value: ('2020-01-06'..'2020-01-10'), text: "Inicio Corinavirus", color: "red")%>   %>
+  <% point_annotation(value: ['2020-02-20',700], text: "Inicio Corinavirus", color: "red")%>   %>
+  <% end %>
+  %>
+   </div>
     <%= yield %>
+
   </body>
 </html>
