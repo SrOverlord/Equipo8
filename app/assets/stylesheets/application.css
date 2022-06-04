@@ -19,6 +19,7 @@
  } */
 
 
+ /* ____________________________HEader______________________ */
  header{
      padding-top: 10px;
      background-color: orange;
@@ -34,6 +35,15 @@
     text-decoration: none;
  } 
 
+ .contMenu ul{
+    list-style: none;
+ }
+ .contMenu li{
+     color:white;
+     display: inline;
+     padding-left: 5px;
+     padding-right: 5px;
+ }
  .contMenu :link{
      text-decoration: none;
      color: white;
