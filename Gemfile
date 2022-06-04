@@ -28,7 +28,7 @@ gem "stimulus-rails"
 gem "jbuilder"
 
 # _____________________CREACION GRAFICA_________________________________
-gem 'apexcharts', '~> 0.1.10'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
