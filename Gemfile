@@ -27,6 +27,9 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# _____________________CREACION GRAFICA_________________________________
+gem "apexcharts", "~> 0.1.8"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
