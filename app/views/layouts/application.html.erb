@@ -26,7 +26,12 @@
   </div>
  </header>
 
-<% line_chart [30,40,35,50,49,60,70,91,125] %>
+<% line_chart ([
+  {name: "Series A", data: 25},
+  {name: "Series B", data: 100},
+  {name: "Series C", data: 200},
+  {name: "Series D", data: 125}
+], legend: "left")  %>
 <%# 
   <div class= "contGrafica">
  <%= pie_chart([
