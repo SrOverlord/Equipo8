@@ -35,14 +35,19 @@
     text-decoration: none;
  } 
 
+    
+
  .contMenu ul{
     list-style: none;
  }
- .contMenu li{
+ .contMenu ul li{
      color:white;
      display: inline;
      padding-left: 5px;
      padding-right: 5px;
+ }
+ .contMenu ul li a{
+    color:white;
  }
  .contMenu :link{
      text-decoration: none;
