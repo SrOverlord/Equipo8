@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :perros
   get 'porjects/index'
   resources :developers
   resources :projects
