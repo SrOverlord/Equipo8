@@ -14,9 +14,9 @@
  *= require_self
  */
 
- *{
+ /* *{
     background-color: white;
- }
+ } */
 
 
  header{
@@ -29,4 +29,5 @@
  .contMenu{
     background-color: black;
     color: white;
+    margin-right: 10px;
  } 
