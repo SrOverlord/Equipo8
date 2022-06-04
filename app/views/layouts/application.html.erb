@@ -35,7 +35,11 @@
  %>
 
  <%
-   var options = {
+   options = {
+     series: [{
+          name: 'XYZ MOTORS',
+          data: [30,40,35,50,49,60,70,91,125]
+        }],
           chart: {
           type: 'area',
           stacked: false,
@@ -94,12 +98,10 @@
  %>
 
   <div class= "contGrafica">
-  <%= 
-  area_chart(series,{**options,theme:"palette1"}) do %>
-  <% x_annotation(value: ('2020-01-06'..'2020-01-10'), text: "Inicio Corinavirus", color: "red")%>   %>
-  <% point_annotation(value: ['2020-02-20',700], text: "Inicio Corinavirus", color: "red")%>   %>
+  <%= area_chart(series,{**options,theme:"palette1"}) %>
   <% end %>
-  %>
+  
+  
    </div>
     <%= yield %>
 
