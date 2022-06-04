@@ -20,6 +20,7 @@
 
 
  header{
+    margin-top: 10px;
      background-color: orange;
      color: white;
      text-align: center;
@@ -30,4 +31,5 @@
     background-color: black;
     color: white;
     margin-right: 10px;
+    text-decoration: none;
  } 
