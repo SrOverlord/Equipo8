@@ -14,5 +14,6 @@ date_list = []
 end
 
 
-100.times do
-    Perros
+20.times do
+    Usuario.create(name: date_list.sample, team: 1);
+end
