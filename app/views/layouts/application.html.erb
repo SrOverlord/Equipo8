@@ -27,7 +27,21 @@
   </div>
  </header>
 
-  <div id="chart">
+  <div >
+  <% series = [
+  {name: "Inactive", data: [1,2,3,4,5,6,7,8]},
+  {name: "Active", data: [1,2,3,4,5,6,7,8]}
+] %>
+
+<% options = {
+  title: 'Properties Growth',
+  subtitle: 'Grouped Per Week',
+  xtitle: 'Week',
+  ytitle: 'Properties',
+  stacked: true
+} %>
+
+<%= line_chart(series, options) %>
 </div>
   
    </div>
