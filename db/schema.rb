@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_04_092026) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_05_095430) do
   create_table "developers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "surname"
@@ -45,6 +45,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_04_092026) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_pruebas_on_project_id"
+  end
+
+  create_table "usuarios", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.integer "team"
+    t.text "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team"], name: "index_usuarios_on_team", unique: true
   end
 
   add_foreign_key "developers", "projects"
