@@ -28,13 +28,13 @@
  </header>
 
   <div >
-  <%
+  <%# <%
 series= [{
   data: [[1324508400000, 34], [1324594800000, 54] , ... , [1326236400000, 43]]
 }]
 %>
 
-<% options = {
+<%# <% options = {
   title: 'Properties Growth',
   subtitle: 'Grouped Per Week',
   xtitle: 'Week',
@@ -42,7 +42,7 @@ series= [{
   stacked: true
 } %>
 
-<%= line_chart(series, options) %>
+<%# <%= line_chart(series, options) %> %> %>
 </div>
   
    </div>
