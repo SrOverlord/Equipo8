@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+date_list = []
+
+10.times do 
+    dates_list << Time.now - rand(1..365).day
+end
+
+
+100.times do
+    Perros
