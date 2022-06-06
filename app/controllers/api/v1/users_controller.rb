@@ -1,4 +1,7 @@
-class UsersController < ApplicationController
+
+module Api
+  module V1
+    class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
@@ -67,4 +70,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:nombre, :apellidos, :email, :dni, :telefono, :contrasena)
     end
+end
+end
 end
