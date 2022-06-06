@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :usuarios
   resources :perros
   # get 'porjects/index'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
      resources :projects
+     resources :users
     end
    end
 

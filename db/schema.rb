@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_05_095430) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_06_210039) do
   create_table "developers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "surname"
@@ -45,6 +45,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_095430) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_pruebas_on_project_id"
+  end
+
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "nombre"
+    t.string "apellidos"
+    t.string "email"
+    t.string "dni"
+    t.integer "telefono"
+    t.string "contrasena"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dni"], name: "index_users_on_dni", unique: true
   end
 
   create_table "usuarios", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
