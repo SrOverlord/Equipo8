@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_06_210039) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_07_211618) do
+  create_table "cuenta_bancos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "numeroCuenta"
+    t.float "saldo"
+    t.string "tipo"
+    t.float "comision"
+    t.string "divisa"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["numeroCuenta"], name: "index_cuenta_bancos_on_numeroCuenta", unique: true
+    t.index ["user_id"], name: "index_cuenta_bancos_on_user_id"
+  end
+
   create_table "developers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "surname"
@@ -68,6 +81,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_06_210039) do
     t.index ["team"], name: "index_usuarios_on_team", unique: true
   end
 
+  add_foreign_key "cuenta_bancos", "users"
   add_foreign_key "developers", "projects"
   add_foreign_key "pruebas", "projects"
 end

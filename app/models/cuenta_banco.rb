@@ -1,0 +1,3 @@
+class CuentaBanco < ApplicationRecord
+  belongs_to :user
+end
