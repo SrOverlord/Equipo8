@@ -5,7 +5,7 @@ class CuentaBancosController < ApplicationController
   skip_before_action :verify_authenticity_token
     
       def show
-            @cuenta_banco = User.find_by(id: params[:id])
+            @cuenta_banco = CuentaBanco.find_by(id: params[:id])
             if (@cuenta_banco!=nil)
               render json: @cuenta_banco, status: :ok
         else
@@ -14,11 +14,11 @@ class CuentaBancosController < ApplicationController
       end
       
       def index
-              render json: User.all, status: :ok
+              render json: CuentaBanco.all, status: :ok
       end
       
       def update
-       @cuenta_banco = User.find(params[:id])
+       @cuenta_banco = CuentaBanco.find(params[:id])
       
         if @cuenta_banco.update(project_params)
               render json: @cuenta_banco, status: :ok
@@ -28,7 +28,7 @@ class CuentaBancosController < ApplicationController
       end
       
       def create
-          @cuenta_banco = User.new(project_params)
+          @cuenta_banco = CuentaBanco.new(project_params)
       
             if @cuenta_banco.save
               render json: @cuenta_banco, status: :created
@@ -38,7 +38,7 @@ class CuentaBancosController < ApplicationController
       end
       
       def destroy
-          @cuenta_banco = User.find(params[:id])
+          @cuenta_banco = CuentaBanco.find(params[:id])
           if @cuenta_banco.destroy
             render json: :nothing, status: :ok
           else
