@@ -21,7 +21,7 @@ module Api
         def update
          @user = User.find(params[:id])
         
-          if @user.update(project_params)
+          if @user.update(user_params)
                 render json: @user, status: :ok
               else
                 render json: @user.errors, status: :unprocessable_entity
@@ -29,7 +29,7 @@ module Api
         end
         
         def create
-            @user = User.new(project_params)
+            @user = User.new(user_params)
         
               if @user.save
                 render json: @user, status: :created
@@ -47,7 +47,7 @@ module Api
             end
         end
         private
-        def project_params
+        def user_params
               params.require(:user).permit( :email, :encrypted_password, :nombre, :apellidos, :dni, :telefono, :contrasena)
         end
         end
