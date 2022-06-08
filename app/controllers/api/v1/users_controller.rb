@@ -6,7 +6,7 @@ module Api
       skip_before_action :verify_authenticity_token
     
       def show
-            @user = User.find_by(id: params[:id])
+            @user = User.find_by(user_id: params[:user_id])
             if (@user!=nil)
               render json: @user, status: :ok
         else
