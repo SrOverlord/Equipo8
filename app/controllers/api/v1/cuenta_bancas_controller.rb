@@ -6,11 +6,7 @@ module Api
   skip_before_action :verify_authenticity_token
   
   def show
-    if(params[:user_id] && params[:id])
-      @cuenta_banca = CuentaBanca.where(user_id: params[:id], id: params[:user_id])
-      else
         @cuenta_banca = CuentaBanca.where(user_id: params[:id])
-      end
 
         if (@cuenta_banca!=nil)
           render json: @cuenta_banca, status: :ok
@@ -18,6 +14,17 @@ module Api
          render json: :nothing, status: :not_found
       end
   end
+
+  def showID
+    @cuenta_banca = CuentaBanca.where(user_id: params[:id], id: params[:user_id])
+
+
+      if (@cuenta_banca!=nil)
+        render json: @cuenta_banca, status: :ok
+  else
+       render json: :nothing, status: :not_found
+    end
+end
   
   def index
           render json: CuentaBanca.where(user_id: current_user.id), status: :ok
