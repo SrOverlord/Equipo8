@@ -5,10 +5,10 @@ class CuentaBancosController < ApplicationController
   skip_before_action :verify_authenticity_token
     
       def show
-            @cuenta_banco = CuentaBanco.find_by(user_id: params[:id])
+            @cuenta_banco = CuentaBanco.find(user_id: params[:id])
             if (@cuenta_banco!=nil)
               render json: @cuenta_banco, status: :ok
-        else
+          else
              render json: :nothing, status: :not_found
           end
       end
