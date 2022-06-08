@@ -19,7 +19,7 @@ class CuentaBancosTest < ApplicationSystemTestCase
     fill_in "Numerocuenta", with: @cuenta_banco.numeroCuenta
     fill_in "Saldo", with: @cuenta_banco.saldo
     fill_in "Tipo", with: @cuenta_banco.tipo
-    fill_in "Users", with: @cuenta_banco.users_id
+    fill_in "User", with: @cuenta_banco.user_id
     click_on "Create Cuenta banco"
 
     assert_text "Cuenta banco was successfully created"
@@ -35,7 +35,7 @@ class CuentaBancosTest < ApplicationSystemTestCase
     fill_in "Numerocuenta", with: @cuenta_banco.numeroCuenta
     fill_in "Saldo", with: @cuenta_banco.saldo
     fill_in "Tipo", with: @cuenta_banco.tipo
-    fill_in "Users", with: @cuenta_banco.users_id
+    fill_in "User", with: @cuenta_banco.user_id
     click_on "Update Cuenta banco"
 
     assert_text "Cuenta banco was successfully updated"

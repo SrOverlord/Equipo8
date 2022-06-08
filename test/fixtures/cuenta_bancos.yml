@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  users: one
+  user: one
   numeroCuenta: MyString
   saldo: 1.5
   tipo: MyString
@@ -9,7 +9,7 @@ one:
   divisa: MyString
 
 two:
-  users: two
+  user: two
   numeroCuenta: MyString
   saldo: 1.5
   tipo: MyString
