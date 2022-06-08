@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :cuenta_bancas
+  resources :cuenta_bancos
+  devise_for :users
   # resources :cuenta_bancos
   # resources :users
   resources :usuarios
