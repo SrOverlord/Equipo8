@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
         resources :cuenta_bancas
-        get '/cuenta_banca/:id(.:format)/:user_id(.:format)'  => 'cuenta_bancas#showID' , as: 'get_cuenta_id'
+        get '/cuenta_bancas/:id/:user_id', to: 'cuenta_bancas#showID', as: 'cuenta'
+
+        # get '/cuenta_banca/:id(.:format)/:user_id(.:format)'  => 'cuenta_bancas#showID' , as: 'get_cuenta_id'
      resources :users
      devise_for :users
           end
