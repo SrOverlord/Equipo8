@@ -1,7 +1,7 @@
 module Api
   module V1
 class  CuentaBancosController < ApplicationController
-  skip_before_actioCuentaBancosControllern :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
     
   def show
         @cuenta_bancos = CuentaBanco.where("where user_id = "+ params[:id])
