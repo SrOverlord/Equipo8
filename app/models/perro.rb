@@ -1,0 +1,2 @@
+class Perro < ApplicationRecord
+end
