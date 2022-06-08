@@ -65,6 +65,6 @@ class CuentaBancosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cuenta_banco_params
-      params.require(:cuenta_banco).permit(:user_id, :numeroCuenta, :saldo, :tipo, :comision, :divisa)
+      params.require(:cuenta_banco).permit(:users_id, :numeroCuenta, :saldo, :tipo, :comision, :divisa)
     end
 end

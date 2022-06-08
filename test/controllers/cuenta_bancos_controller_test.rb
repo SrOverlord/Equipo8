@@ -17,7 +17,7 @@ class CuentaBancosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cuenta_banco" do
     assert_difference("CuentaBanco.count") do
-      post cuenta_bancos_url, params: { cuenta_banco: { comision: @cuenta_banco.comision, divisa: @cuenta_banco.divisa, numeroCuenta: @cuenta_banco.numeroCuenta, saldo: @cuenta_banco.saldo, tipo: @cuenta_banco.tipo, user_id: @cuenta_banco.user_id } }
+      post cuenta_bancos_url, params: { cuenta_banco: { comision: @cuenta_banco.comision, divisa: @cuenta_banco.divisa, numeroCuenta: @cuenta_banco.numeroCuenta, saldo: @cuenta_banco.saldo, tipo: @cuenta_banco.tipo, users_id: @cuenta_banco.users_id } }
     end
 
     assert_redirected_to cuenta_banco_url(CuentaBanco.last)
@@ -34,7 +34,7 @@ class CuentaBancosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cuenta_banco" do
-    patch cuenta_banco_url(@cuenta_banco), params: { cuenta_banco: { comision: @cuenta_banco.comision, divisa: @cuenta_banco.divisa, numeroCuenta: @cuenta_banco.numeroCuenta, saldo: @cuenta_banco.saldo, tipo: @cuenta_banco.tipo, user_id: @cuenta_banco.user_id } }
+    patch cuenta_banco_url(@cuenta_banco), params: { cuenta_banco: { comision: @cuenta_banco.comision, divisa: @cuenta_banco.divisa, numeroCuenta: @cuenta_banco.numeroCuenta, saldo: @cuenta_banco.saldo, tipo: @cuenta_banco.tipo, users_id: @cuenta_banco.users_id } }
     assert_redirected_to cuenta_banco_url(@cuenta_banco)
   end
 
