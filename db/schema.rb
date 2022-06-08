@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_08_163342) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_08_231016) do
   create_table "cuenta_bancas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "numeroCuenta"
@@ -57,6 +57,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_163342) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_pruebas_on_project_id"
+  end
+
+  create_table "tarjeta", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "titular"
+    t.integer "numero"
+    t.integer "cvc"
+    t.string "fechaCaducidad"
+    t.integer "idCuenta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["idCuenta"], name: "index_tarjeta_on_idCuenta", unique: true
+    t.index ["numero"], name: "index_tarjeta_on_numero", unique: true
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|

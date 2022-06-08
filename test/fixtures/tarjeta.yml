@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titular: MyString
+  numero: 1
+  cvc: 1
+  fechaCaducidad: MyString
+  idCuenta: 1
+
+two:
+  titular: MyString
+  numero: 1
+  cvc: 1
+  fechaCaducidad: MyString
+  idCuenta: 1

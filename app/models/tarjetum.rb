@@ -1,0 +1,2 @@
+class Tarjetum < ApplicationRecord
+end

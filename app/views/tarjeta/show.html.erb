@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tarjetum %>
+
+<div>
+  <%= link_to "Edit this tarjetum", edit_tarjetum_path(@tarjetum) %> |
+  <%= link_to "Back to tarjeta", tarjeta_path %>
+
+  <%= button_to "Destroy this tarjetum", @tarjetum, method: :delete %>
+</div>

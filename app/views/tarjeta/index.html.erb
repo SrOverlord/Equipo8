@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tarjeta</h1>
+
+<div id="tarjeta">
+  <% @tarjeta.each do |tarjetum| %>
+    <%= render tarjetum %>
+    <p>
+      <%= link_to "Show this tarjetum", tarjetum %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tarjetum", new_tarjetum_path %>
