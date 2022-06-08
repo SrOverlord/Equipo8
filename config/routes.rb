@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     namespace :v1 do
      resources :projects
      resources :cuenta_bancos
-     resources :users
+     devise_for :users
           end
    end
 
