@@ -6,20 +6,17 @@ Rails.application.routes.draw do
   # resources :cuenta_bancos
   # resources :users
   # get 'porjects/index'
-
+  
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  
   # Defines the root path route ("/")
   # root "articles#index"
-
+  
   root 'main#home'
- 
-
- 
-
-
+  
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
+      resources :tarjeta
         resources :cuenta_bancas
         get '/cuenta_bancas/:id/:user_id', to: 'cuenta_bancas#showID', as: 'cuenta'
 
