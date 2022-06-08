@@ -14,15 +14,13 @@ Rails.application.routes.draw do
   root 'main#home'
  
 
-  resources :cuenta_banca
-  get 'ver_cuenta'  => 'cuenta_bancas#showID' , as: 'get_cuent'
-
-
+ 
 
 
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
         resources :cuenta_bancas
+        get '/cuenta_banca/:id/:user_id(.:format)'  => 'cuenta_bancas#showID' , as: 'get_cuenta_id'
      resources :users
      devise_for :users
           end
