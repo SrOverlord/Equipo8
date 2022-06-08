@@ -1,6 +1,6 @@
 module Api
   module V1
-class  < ApplicationController
+class  CuentaBancosController < ApplicationController
   skip_before_actioCuentaBancosControllern :verify_authenticity_token
     
   def show
