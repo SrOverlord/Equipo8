@@ -46,7 +46,7 @@ class  CuentaBancosController < ApplicationController
   end
   private
   def project_params
-        params.require(:cuenta_bancos).permit(:name, :team, :info)
+    params.require(:cuenta_banco).permit(:users_id, :numeroCuenta, :saldo, :tipo, :comision, :divisa)
   end
   end
   end

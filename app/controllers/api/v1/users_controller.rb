@@ -48,7 +48,7 @@ module Api
         end
         private
         def project_params
-              params.require(:user).permit(:name, :team, :info)
+              params.require(:user).permit( :email, :encrypted_password, :nombre, :apellidos, :dni, :telefono, :contrasena)
         end
         end
         end
