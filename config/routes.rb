@@ -4,18 +4,16 @@ Rails.application.routes.draw do
   resources :users
   # resources :cuenta_bancos
   # resources :users
-  resources :perros
-  # get 'porjects/index'
-  resources :developers
-  resources :projects
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-	
+
+  root 'main#home'
+ 
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
-     resources :projects
      resources :cuenta_bancas
      resources :users
      devise_for :users
@@ -23,6 +21,5 @@ Rails.application.routes.draw do
    end
 
    
-  root to: 'projects#index'
 
 end
