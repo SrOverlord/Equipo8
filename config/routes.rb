@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :cuenta_bancos
   devise_for :users
+  resources :users
   # resources :cuenta_bancos
   # resources :users
   resources :usuarios
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
      resources :projects
+     resources :cuenta_bancos
+     resources :users
           end
    end
 
