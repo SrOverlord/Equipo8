@@ -6,11 +6,10 @@ module Api
   skip_before_action :verify_authenticity_token
   
   def show
-    if(params[:cuenta_banca_id]){
-      @cuenta_banca = CuentaBanca.where(user_id: params[:id], id: params[:cuenta_banca_id])
+    if(params[:user_id]){
+      @cuenta_banca = CuentaBanca.where(user_id: params[:id], id: params[:user_id])
       }else{
         @cuenta_banca = CuentaBanca.where(user_id: params[:id])
-
     }
         if (@cuenta_banca!=nil)
           render json: @cuenta_banca, status: :ok
