@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users
   # resources :cuenta_bancos
   # resources :users
-  resources :usuarios
   resources :perros
   # get 'porjects/index'
   resources :developers
