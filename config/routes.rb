@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users
   # resources :cuenta_bancos
   # resources :users
-  resources :perros
   # get 'porjects/index'
   resources :developers
   resources :projects
@@ -15,8 +14,7 @@ Rails.application.routes.draw do
 	
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
-     resources :projects
-     resources :cuenta_bancas
+        resources :cuenta_bancas
      resources :users
      devise_for :users
           end
