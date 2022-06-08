@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_06_08_163342) do
-  create_table "cuenta_bancas", force: :cascade do |t|
+  create_table "cuenta_bancas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "numeroCuenta"
     t.float "saldo"
@@ -23,20 +23,43 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_163342) do
     t.index ["numeroCuenta"], name: "index_cuenta_bancas_on_numeroCuenta", unique: true
   end
 
-  create_table "cuenta_bancos", force: :cascade do |t|
-    t.integer "users_id", null: false
-    t.string "numeroCuenta"
-    t.float "saldo"
-    t.string "tipo"
-    t.float "comision"
-    t.string "divisa"
+  create_table "developers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.bigint "project_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["numeroCuenta"], name: "index_cuenta_bancos_on_numeroCuenta", unique: true
-    t.index ["users_id"], name: "index_cuenta_bancos_on_users_id"
+    t.index ["project_id"], name: "index_developers_on_project_id"
+    t.index ["surname"], name: "index_developers_on_surname"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "perros", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.integer "team"
+    t.text "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team"], name: "index_perros_on_team", unique: true
+  end
+
+  create_table "projects", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.integer "team", null: false
+    t.text "info"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["team"], name: "index_projects_on_team", unique: true
+  end
+
+  create_table "pruebas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.bigint "project_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_pruebas_on_project_id"
+  end
+
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -54,5 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_163342) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "cuenta_bancos", "users", column: "users_id"
+  add_foreign_key "developers", "projects"
+  add_foreign_key "pruebas", "projects"
 end
