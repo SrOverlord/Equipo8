@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DS18</title>
+    <title>Local</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,27 +11,19 @@
   </head>
 
   <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
 
- <header>
+  <div class="ContMenu" >
 
-  <h1>Home Bank</h1>
-  <h3><i>Tu banco en casa</i></h3>
-  <div class = "contMenu">
+    <% if user_signed_in? %>
+    <li><%= link_to 'Terminar Sesion', destroy_user_session_path, :method => :delete %></li>
+    <% else %>
+    <li><%= link_to 'Iniciar sesion ', new_user_session_apth %></li>
+    <% end %>
 
-  <ul>
-  <li><%= link_to "Projects", :projects %></li>
-  <li><%= link_to "Developers", :developers %></li>
-  <li><%= link_to "Perros", :perros %></li>
-  <li><%= link_to "CuentaBancos", :cuenta_bancos %></li>
-
-
-  </ul>
   </div>
- </header>
-	<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-   </div>
-    <%= yield %>
 
+    <%= yield %>
   </body>
 </html>
