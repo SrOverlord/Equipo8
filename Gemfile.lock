@@ -71,10 +71,15 @@ GEM
     apexcharts (0.1.11)
       dry-schema (~> 1.5)
       smart_kv (~> 0.2.8)
+    autoprefixer-rails (10.4.7.0)
+      execjs (~> 2)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.4)
     capybara (3.37.1)
       addressable
@@ -125,6 +130,9 @@ GEM
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
     erubi (1.10.0)
+    execjs (2.8.1)
+    ffi (1.15.5)
+    ffi (1.15.5-x86-mingw32)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -147,6 +155,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.5.1)
     mysql2 (0.5.4)
@@ -165,6 +174,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
+    nokogiri (1.13.6)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.6-x86-mingw32)
       racc (~> 1.4)
     nokogiri (1.13.6-x86_64-linux)
@@ -212,6 +224,16 @@ GEM
       railties (>= 5.0)
     rexml (3.2.5)
     rubyzip (2.3.2)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
+    sassc (2.4.0)
+      ffi (~> 1.9)
+    sassc-rails (2.1.2)
+      railties (>= 4.0.0)
+      sassc (>= 2.0)
+      sprockets (> 3.0)
+      sprockets-rails
+      tilt
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -228,6 +250,7 @@ GEM
       railties (>= 6.0.0)
     strscan (3.0.3)
     thor (1.2.1)
+    tilt (2.0.10)
     timeout (0.2.0)
     turbo-rails (1.0.1)
       actionpack (>= 6.0.0)
@@ -255,12 +278,14 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
+  ruby
   x86-mingw32
   x86_64-linux
 
 DEPENDENCIES
   apexcharts (~> 0.1.10)
   bootsnap
+  bootstrap-sass (~> 3.4, >= 3.4.1)
   capybara
   debug
   devise
@@ -269,6 +294,7 @@ DEPENDENCIES
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rails (~> 7.0.3)
+  sass-rails (~> 6.0)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
@@ -278,7 +304,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   2.3.13
+   2.3.12

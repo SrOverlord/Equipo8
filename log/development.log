@@ -4589,3 +4589,265 @@ Processing by CriptoController#criptoVista as HTML
 Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 16558)
 
 
+Started GET "/" for 127.0.0.1 at 2022-06-09 10:51:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (31.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MainController#home as HTML
+  [1m[36mUser Load (32.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering main/home.html.erb within layouts/application
+  Rendered main/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 559)
+  Rendered layout layouts/application.html.erb (Duration: 193.1ms | Allocations: 97161)
+Completed 200 OK in 475ms (Views: 198.4ms | ActiveRecord: 215.5ms | Allocations: 118334)
+
+
+Started GET "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:51:39 +0200
+Processing by CuentaBancasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/index.html.erb within layouts/application
+  [1m[36mCuentaBanca Load (32.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` IS NULL[0m
+  ↳ app/views/cuenta_bancas/index.html.erb:6
+  Rendered cuenta_bancas/index.html.erb within layouts/application (Duration: 36.3ms | Allocations: 1028)
+  [1m[36mUser Load (32.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 4086)
+Completed 200 OK in 154ms (Views: 19.1ms | ActiveRecord: 98.5ms | Allocations: 5719)
+
+
+Started GET "/cuenta_bancas/new" for 127.0.0.1 at 2022-06-09 10:51:40 +0200
+Processing by CuentaBancasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/new.html.erb within layouts/application
+  [1m[36mUser Load (32.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/cuenta_bancas/_form.html.erb:15
+  Rendered cuenta_bancas/_form.html.erb (Duration: 252.9ms | Allocations: 8505)
+  Rendered cuenta_bancas/new.html.erb within layouts/application (Duration: 255.7ms | Allocations: 8815)
+  Rendered layout layouts/application.html.erb (Duration: 261.9ms | Allocations: 11155)
+Completed 200 OK in 350ms (Views: 231.0ms | ActiveRecord: 70.0ms | Allocations: 15644)
+
+
+Started POST "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:51:50 +0200
+Processing by CuentaBancasController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cuenta_banca"=>{"user_id"=>"1", "numeroCuenta"=>"dfg", "saldo"=>"dfg", "tipo"=>"df", "comision"=>"ddfg", "divisa"=>"fgf"}, "commit"=>"Create Cuenta banca"}
+  [1m[36mTRANSACTION (31.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mCuentaBanca Create (45.0ms)[0m  [1m[32mINSERT INTO `cuenta_bancas` (`user_id`, `numeroCuenta`, `saldo`, `tipo`, `comision`, `divisa`, `created_at`, `updated_at`) VALUES (1, 'dfg', 'dfg', 'df', 'ddfg', 'fgf', '2022-06-09 08:51:50.545191', '2022-06-09 08:51:50.545191')[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (105.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/cuenta_bancas/25
+Completed 302 Found in 227ms (ActiveRecord: 181.9ms | Allocations: 2974)
+
+
+Started GET "/cuenta_bancas/25" for 127.0.0.1 at 2022-06-09 10:51:50 +0200
+Processing by CuentaBancasController#show as TURBO_STREAM
+  Parameters: {"id"=>"25"}
+  [1m[36mCuentaBanca Load (57.1ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:63:in `set_cuenta_banca'
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/show.html.erb within layouts/application
+  Rendered cuenta_bancas/_cuenta_banca.html.erb (Duration: 2.1ms | Allocations: 310)
+  Rendered cuenta_bancas/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1484)
+  [1m[36mUser Load (31.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 4538)
+Completed 200 OK in 149ms (Views: 23.3ms | ActiveRecord: 88.6ms | Allocations: 5995)
+
+
+Started GET "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:51:58 +0200
+Processing by CuentaBancasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/index.html.erb within layouts/application
+  [1m[36mCuentaBanca Load (31.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` IS NULL[0m
+  ↳ app/views/cuenta_bancas/index.html.erb:6
+  Rendered cuenta_bancas/index.html.erb within layouts/application (Duration: 66.8ms | Allocations: 792)
+  [1m[36mUser Load (31.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 113.1ms | Allocations: 3833)
+Completed 200 OK in 115ms (Views: 51.4ms | ActiveRecord: 62.8ms | Allocations: 4151)
+
+
+Started GET "/cuenta_bancas/new" for 127.0.0.1 at 2022-06-09 10:52:02 +0200
+Processing by CuentaBancasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/new.html.erb within layouts/application
+  [1m[36mUser Load (31.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/cuenta_bancas/_form.html.erb:15
+  Rendered cuenta_bancas/_form.html.erb (Duration: 71.1ms | Allocations: 2817)
+  Rendered cuenta_bancas/new.html.erb within layouts/application (Duration: 71.6ms | Allocations: 2914)
+  Rendered layout layouts/application.html.erb (Duration: 77.9ms | Allocations: 5241)
+Completed 200 OK in 79ms (Views: 47.5ms | ActiveRecord: 31.3ms | Allocations: 5521)
+
+
+Started POST "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:09 +0200
+Processing by CuentaBancasController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cuenta_banca"=>{"user_id"=>"1", "numeroCuenta"=>"dfg", "saldo"=>"dfg", "tipo"=>"dfg", "comision"=>"ddfg", "divisa"=>"dfg"}, "commit"=>"Create Cuenta banca"}
+  [1m[36mTRANSACTION (52.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mCuentaBanca Create (33.4ms)[0m  [1m[32mINSERT INTO `cuenta_bancas` (`user_id`, `numeroCuenta`, `saldo`, `tipo`, `comision`, `divisa`, `created_at`, `updated_at`) VALUES (1, 'dfg', 'dfg', 'dfg', 'ddfg', 'dfg', '2022-06-09 08:52:09.768193', '2022-06-09 08:52:09.768193')[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (59.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 144.8ms | Allocations: 3165)
+
+
+  
+ActiveRecord::RecordNotUnique (Mysql2::Error: Duplicate entry 'dfg' for key 'cuenta_bancas.index_cuenta_bancas_on_numeroCuenta'):
+  
+app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+app/controllers/cuenta_bancas_controller.rb:26:in `create'
+Started GET "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:13 +0200
+Processing by CuentaBancasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/index.html.erb within layouts/application
+  [1m[36mCuentaBanca Load (33.0ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` IS NULL[0m
+  ↳ app/views/cuenta_bancas/index.html.erb:6
+  Rendered cuenta_bancas/index.html.erb within layouts/application (Duration: 68.2ms | Allocations: 780)
+  [1m[36mUser Load (32.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 114.3ms | Allocations: 3840)
+Completed 200 OK in 116ms (Views: 49.9ms | ActiveRecord: 65.4ms | Allocations: 4151)
+
+
+Started GET "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:13 +0200
+Processing by CuentaBancasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/index.html.erb within layouts/application
+  [1m[36mCuentaBanca Load (30.9ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` IS NULL[0m
+  ↳ app/views/cuenta_bancas/index.html.erb:6
+  Rendered cuenta_bancas/index.html.erb within layouts/application (Duration: 70.4ms | Allocations: 779)
+  [1m[36mUser Load (31.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 113.4ms | Allocations: 3819)
+Completed 200 OK in 114ms (Views: 51.2ms | ActiveRecord: 62.7ms | Allocations: 4125)
+
+
+Started GET "/cuenta_bancas/new" for 127.0.0.1 at 2022-06-09 10:52:15 +0200
+Processing by CuentaBancasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/new.html.erb within layouts/application
+  [1m[36mUser Load (30.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/cuenta_bancas/_form.html.erb:15
+  Rendered cuenta_bancas/_form.html.erb (Duration: 80.4ms | Allocations: 2798)
+  Rendered cuenta_bancas/new.html.erb within layouts/application (Duration: 80.7ms | Allocations: 2898)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 5224)
+Completed 200 OK in 84ms (Views: 52.7ms | ActiveRecord: 30.9ms | Allocations: 5497)
+
+
+Started POST "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:23 +0200
+Processing by CuentaBancasController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cuenta_banca"=>{"user_id"=>"1", "numeroCuenta"=>"dfg", "saldo"=>"fg", "tipo"=>"fg", "comision"=>"dfg", "divisa"=>"fg"}, "commit"=>"Create Cuenta banca"}
+  [1m[36mTRANSACTION (31.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mCuentaBanca Create (33.5ms)[0m  [1m[32mINSERT INTO `cuenta_bancas` (`user_id`, `numeroCuenta`, `saldo`, `tipo`, `comision`, `divisa`, `created_at`, `updated_at`) VALUES (1, 'dfg', 'fg', 'fg', 'dfg', 'fg', '2022-06-09 08:52:23.596928', '2022-06-09 08:52:23.596928')[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (65.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 173ms (ActiveRecord: 131.1ms | Allocations: 3161)
+
+
+  
+ActiveRecord::RecordNotUnique (Mysql2::Error: Duplicate entry 'dfg' for key 'cuenta_bancas.index_cuenta_bancas_on_numeroCuenta'):
+  
+app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+app/controllers/cuenta_bancas_controller.rb:26:in `create'
+Started GET "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:29 +0200
+Processing by CuentaBancasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/index.html.erb within layouts/application
+  [1m[36mCuentaBanca Load (31.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` IS NULL[0m
+  ↳ app/views/cuenta_bancas/index.html.erb:6
+  Rendered cuenta_bancas/index.html.erb within layouts/application (Duration: 63.9ms | Allocations: 782)
+  [1m[36mUser Load (32.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 3842)
+Completed 200 OK in 104ms (Views: 39.1ms | ActiveRecord: 63.7ms | Allocations: 4152)
+
+
+Started GET "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:29 +0200
+Processing by CuentaBancasController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/index.html.erb within layouts/application
+  [1m[36mCuentaBanca Load (31.8ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` IS NULL[0m
+  ↳ app/views/cuenta_bancas/index.html.erb:6
+  Rendered cuenta_bancas/index.html.erb within layouts/application (Duration: 74.9ms | Allocations: 781)
+  [1m[36mUser Load (31.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 120.7ms | Allocations: 3821)
+Completed 200 OK in 122ms (Views: 57.4ms | ActiveRecord: 63.8ms | Allocations: 4127)
+
+
+Started GET "/cuenta_bancas/new" for 127.0.0.1 at 2022-06-09 10:52:31 +0200
+Processing by CuentaBancasController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/new.html.erb within layouts/application
+  [1m[36mUser Load (31.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/cuenta_bancas/_form.html.erb:15
+  Rendered cuenta_bancas/_form.html.erb (Duration: 77.2ms | Allocations: 2798)
+  Rendered cuenta_bancas/new.html.erb within layouts/application (Duration: 77.9ms | Allocations: 2895)
+  Rendered layout layouts/application.html.erb (Duration: 84.0ms | Allocations: 5221)
+Completed 200 OK in 85ms (Views: 53.3ms | ActiveRecord: 31.2ms | Allocations: 5494)
+
+
+Started POST "/cuenta_bancas" for 127.0.0.1 at 2022-06-09 10:52:37 +0200
+Processing by CuentaBancasController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cuenta_banca"=>{"user_id"=>"1", "numeroCuenta"=>"cc", "saldo"=>"cc", "tipo"=>"cc", "comision"=>"cc", "divisa"=>"cc"}, "commit"=>"Create Cuenta banca"}
+  [1m[36mTRANSACTION (31.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mCuentaBanca Create (32.6ms)[0m  [1m[32mINSERT INTO `cuenta_bancas` (`user_id`, `numeroCuenta`, `saldo`, `tipo`, `comision`, `divisa`, `created_at`, `updated_at`) VALUES (1, 'cc', 'cc', 'cc', 'cc', 'cc', '2022-06-09 08:52:37.189246', '2022-06-09 08:52:37.189246')[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (99.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/cuenta_bancas/28
+Completed 302 Found in 206ms (ActiveRecord: 164.2ms | Allocations: 2241)
+
+
+Started GET "/cuenta_bancas/28" for 127.0.0.1 at 2022-06-09 10:52:37 +0200
+Processing by CuentaBancasController#show as TURBO_STREAM
+  Parameters: {"id"=>"28"}
+  [1m[36mCuentaBanca Load (32.1ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`id` = 28 LIMIT 1[0m
+  ↳ app/controllers/cuenta_bancas_controller.rb:63:in `set_cuenta_banca'
+  Rendering layout layouts/application.html.erb
+  Rendering cuenta_bancas/show.html.erb within layouts/application
+  Rendered cuenta_bancas/_cuenta_banca.html.erb (Duration: 0.3ms | Allocations: 31)
+  Rendered cuenta_bancas/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 609)
+  [1m[36mUser Load (31.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 3645)
+Completed 200 OK in 114ms (Views: 18.0ms | ActiveRecord: 63.5ms | Allocations: 4393)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2022-06-09 10:55:34 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (33.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (35.4ms)[0m  [1m[33mUPDATE `users` SET `users`.`remember_created_at` = NULL, `users`.`updated_at` = '2022-06-09 08:55:34.522260' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (154.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 310ms (ActiveRecord: 252.8ms | Allocations: 5110)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-09 10:55:34 +0200
+Processing by MainController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-09 10:55:34 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.3ms | Allocations: 831)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 47.3ms | Allocations: 3306)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 5666)
+Completed 200 OK in 65ms (Views: 58.3ms | ActiveRecord: 0.0ms | Allocations: 7411)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-06-09 10:58:08 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (32.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5703)
+  Rendered layout layouts/application.html.erb (Duration: 1243.8ms | Allocations: 168482)
+Completed 200 OK in 1449ms (Views: 1250.4ms | ActiveRecord: 166.9ms | Allocations: 182550)
+
+

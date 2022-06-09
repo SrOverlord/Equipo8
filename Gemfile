@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
-
+#ruby "2.7.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
 
@@ -51,7 +51,8 @@ gem "bootsnap", require: false
 gem 'devise'
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem 'sass-rails', '~> 6.0'
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
