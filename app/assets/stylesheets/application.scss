@@ -90,6 +90,12 @@ color: orange
 .flex a{
      text-decoration: none;
 }
+
+#criptos{
+    display: flex;
+    flex-direction: column;
+    
+}
 #criptos div{
     border-radius: 1em;
     width: 50%;
