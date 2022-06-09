@@ -1,3 +1,7 @@
+<section class="formulario3">
+
+<h4> Editar Cuenta </h4>
+
 <%= form_with(model: cuenta_banca) do |form| %>
   <% if cuenta_banca.errors.any? %>
     <div style="color: red">
@@ -13,35 +17,37 @@
 
   <div>
     <%= form.label :user_id, style: "display: block" %> <%= current_user.id%>
-    <%= form.number_field :user_id, value: current_user.id, type: :hidden %>
+    <%= form.number_field :user_id, value: current_user.id, type: :hidden, class: "controls"  %>
   </div>
 
   <div>
     <%= form.label :numeroCuenta, style: "display: block" %>
-    <%= form.text_field :numeroCuenta %>
+    <%= form.text_field :numeroCuenta, class: "controls"  %>
   </div>
 
   <div>
     <%= form.label :saldo, style: "display: block" %>
-    <%= form.text_field :saldo %>
+    <%= form.text_field :saldo, class: "controls"  %>
   </div>
 
   <div>
     <%= form.label :tipo, style: "display: block" %>
-    <%= form.text_field :tipo %>
+    <%= form.text_field :tipo, class: "controls"  %>
   </div>
 
   <div>
     <%= form.label :comision, style: "display: block" %>
-    <%= form.text_field :comision %>
+    <%= form.text_field :comision, class: "controls"  %>
   </div>
 
   <div>
     <%= form.label :divisa, style: "display: block" %>
-    <%= form.text_field :divisa %>
+    <%= form.text_field :divisa, class: "controls"  %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit  %>
   </div>
 <% end %>
+
+</section>

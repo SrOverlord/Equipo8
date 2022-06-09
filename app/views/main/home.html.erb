@@ -1,7 +1,27 @@
-<h1>Main#home</h1>
-<p>Find me in app/views/main/home.html.erb</p>
 
- <li><%= link_to "CuentaBancas", :cuenta_bancas %></li>
- <li><%= link_to "Criptos",  screencripto_path %></li>
+ <p style="color: green"><%= notice %></p>
+
+<center><h1> Cuentas del Usuario</h1></center>
+
+<%# Mostramos Cuentas %>
+
+<div class="criptos">
+    <% @cuentas = CuentaBanca.all %>
+  <% @cuentas.each do |cuenta| %>
+    <%= render cuenta %>
+
+    <div class="botones">
+      <%= button_to "Editar Cuenta", edit_cuenta_banca_path(cuenta), method: :get, :class => "button2"%> 
+
+      <%= button_to "Eliminar Cuenta", @cuenta_banca, method: :delete, :class => "button2" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="creacion">
+
+  <center><p><%= link_to "Crear Cuenta Nueva", new_cuenta_banca_path %></center></p>
+
+</div>
 
 

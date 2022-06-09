@@ -8,106 +8,102 @@
     font-weight: 200px;
 }
 
-
-
-header{
-
-   display: flex;
-   flex-direction: row;
-   /* background-color: aqua; */
-   justify-content: space-evenly;
-   text-align: center;
-   background-color: white;
-   color:orange;
-   align-content: center;
-}
-
-
-.contSesion{
-    float:right;
+header {
     display: flex;
     flex-direction: row;
-    padding-top:1em ;
-   list-style: none;
-   text-decoration: none;
-   justify-content: space-evenly;
-   gap: 2em;
-   text-align: center;
+    /* background-color: aqua; */
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: white;
+    color: orange;
+    align-content: center;
 }
 
-.contSesion a{
-color: orange
-
-}
-.contSesion li{
-   font-size: 22;
-   text-decoration: none;
-   color: orange
-}
-.contSaldo{
-   color: black;
-
+.contSesion {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em;
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-evenly;
+    gap: 2em;
+    text-align: center;
 }
 
-.contLogo{
-   font-size: 30px;
+.contSesion a {
+    color: orange
 }
 
-.menu{
-   list-style: none;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   color: white;
-   background-color: black;
-}
-.menu a{
-   font-size: 15px;
-   text-decoration: none;
-   color:white
+.contSesion li {
+    font-size: 22;
+    text-decoration: none;
+    color: orange
 }
 
-.flex{
-   display: flex;
-   flex-direction: row;
-   /* background-color: aqua; */
-   justify-content: space-evenly;
+.contSaldo {
+    color: black;
 }
 
-.flex div{
-   width: 200px;
-   height: 125px;
-   border-radius: 1em;
-   border: 5px solid orange;
-   /* background-color: aqua; */
-   text-align: center;
-   font-weight: 500%;
-   font-size: 20px;
-   background-color: white;
-   color: black;
+.contLogo {
+    font-size: 30px;
 }
 
-.flex a{
-     text-decoration: none;
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+    background-color: black;
 }
 
-.flex li{
+.menu a {
+    font-size: 15px;
+    text-decoration: none;
+    color: white
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    /* background-color: aqua; */
+    justify-content: space-evenly;
+}
+
+.flex div {
+    width: 200px;
+    height: 125px;
+    border-radius: 1em;
+    border: 5px solid orange;
+    /* background-color: aqua; */
+    text-align: center;
+    font-weight: 500%;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+
+.flex a {
+    text-decoration: none;
+}
+
+.flex li {
     list-style: none;
 }
 
-
-#criptos div{
+#criptos div {
     border-radius: 1em;
     width: 100%;
     text-align: center;
-justify-content: center;
+    justify-content: center;
     height: 200;
     background-color: whitesmoke;
-    color:black;
+    color: black;
     margin-top: 1em;
 }
 
-.hueco{
+.hueco {
     height: 100;
 }
 
@@ -144,12 +140,13 @@ body {
     font-size: 20px;
 }
 
-.contFormCripto{
+.contFormCripto {
     background-color: white;
     display: flex;
     text-align: center;
     justify-content: center;
 }
+
 .controls {
     width: 100%;
     border: 1px solid orange;
@@ -191,4 +188,213 @@ body {
 
 .formulario p:hover {
     text-decoration: underline;
+}
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    font-weight: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+    //background-color: rgb(250, 177, 42);
+    background-image: url(./fondo-amarillo-anaranjado-abstracto-textura-acuarela_1017-17542.webp);
+}
+
+.formulario {
+    width: 400px;
+    height: 340px;
+    background: white;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px white;
+    padding: 20px 30px;
+    border-top: 4px solid orange;
+    color: black;
+}
+
+.formulario2 {
+    width: 400px;
+    height: 400px;
+    background: white;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px white;
+    padding: 20px 30px;
+    border-top: 4px solid orange;
+    color: black;
+}
+
+.formulario3 {
+    width: 400px;
+    height: 600px;
+    background: white;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px white;
+    padding: 20px 30px;
+    border-top: 4px solid orange;
+    color: black;
+}
+
+.formulario h4 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.formulario2 h4 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.formulario3 h4 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.controls {
+    width: 100%;
+    border: 1px solid orange;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    background: orange;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+
+.button2 {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    color: black;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.button3 {
+    width: 100%;
+    height: 40px;
+    background: white;
+    border: none;
+    color: black;
+    margin-bottom: 16px;
+}
+
+.formulario p {
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.aux {
+    margin-top: 30px;
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.formulario p:hover {
+    text-decoration: underline;
+}
+
+.header2 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-image: url("imgs/logo-nuevo.jpg");
+}
+
+.container-logo {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    background-image: url("/public/logo.png");
+    position: absolute;
+    z-index: 1;
+}
+
+.container-logo img {
+    max-width: 80%;
+    max-height: 80%;
+    background-color: #ffffff9f;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cuentaBanca {
+    padding: 1%;
+    text-align: center;
+    margin-top: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.555);
+    border-radius: 1em;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.criptos {
+    text-align: center;
+}
+
+.creacion {
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 200px;
+}
+
+.creacion p {
+    justify-content: center;
+    font-size: 40px;
 }

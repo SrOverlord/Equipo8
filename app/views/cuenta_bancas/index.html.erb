@@ -1,14 +1,24 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Cuenta bancas</h1>
+<center><h1> Cuentas del Usuario</h1></center>
 
-<div id="cuenta_bancas">
-  <% @cuenta_bancas.each do |cuenta_banca| %>
-    <%= render cuenta_banca %>
-    <p>
-      <%= link_to "Show this cuenta banca", cuenta_banca %>
-    </p>
+<%# Mostramos Cuentas %>
+
+<div class="criptos">
+    <% @cuentas = CuentaBanca.all %>
+  <% @cuentas.each do |cuenta| %>
+    <%= render cuenta %>
+
+    <div class="botones">
+      <%= button_to "Editar Cuenta", edit_cuenta_banca_path(cuenta), method: :get, :class => "button2"%> 
+
+      <%= button_to "Eliminar Cuenta", @cuenta_banca, method: :delete, :class => "button2" %>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New cuenta banca", new_cuenta_banca_path %>
+<div class="creacion">
+
+  <center><p><%= link_to "Crear Cuenta Nueva", new_cuenta_banca_path %></center></p>
+
+</div>
