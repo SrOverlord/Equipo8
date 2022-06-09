@@ -3,9 +3,9 @@ class CreateCuentaBancas < ActiveRecord::Migration[7.0]
     create_table :cuenta_bancas do |t|
       t.integer :user_id
       t.string :numeroCuenta
-      t.float :saldo
+      t.string :saldo
       t.string :tipo
-      t.float :comision
+      t.string :comision
       t.string :divisa
 
       t.timestamps
