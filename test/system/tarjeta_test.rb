@@ -15,8 +15,9 @@ class TarjetaTest < ApplicationSystemTestCase
     click_on "New tarjetum"
 
     fill_in "Cvc", with: @tarjetum.cvc
-    fill_in "Fechacaducidad", with: @tarjetum.fechaCaducidad
+    fill_in "Fechacaducidad", with: @tarjetum.fechacaducidad
     fill_in "Idcuenta", with: @tarjetum.idCuenta
+    fill_in "Idusuario", with: @tarjetum.idUsuario
     fill_in "Numero", with: @tarjetum.numero
     fill_in "Titular", with: @tarjetum.titular
     click_on "Create Tarjetum"
@@ -30,8 +31,9 @@ class TarjetaTest < ApplicationSystemTestCase
     click_on "Edit this tarjetum", match: :first
 
     fill_in "Cvc", with: @tarjetum.cvc
-    fill_in "Fechacaducidad", with: @tarjetum.fechaCaducidad
+    fill_in "Fechacaducidad", with: @tarjetum.fechacaducidad
     fill_in "Idcuenta", with: @tarjetum.idCuenta
+    fill_in "Idusuario", with: @tarjetum.idUsuario
     fill_in "Numero", with: @tarjetum.numero
     fill_in "Titular", with: @tarjetum.titular
     click_on "Update Tarjetum"

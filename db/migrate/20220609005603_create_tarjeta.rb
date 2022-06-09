@@ -4,12 +4,12 @@ class CreateTarjeta < ActiveRecord::Migration[7.0]
       t.string :titular
       t.string :numero
       t.string :cvc
-      t.string :fechaCaducidad
-      t.integer :idCuenta
+      t.string :fechacaducidad
+      t.string :idCuenta
+      t.string :idUsuario
 
       t.timestamps
     end
-    add_index :tarjeta, :numero, unique: true
     add_index :tarjeta, :idCuenta, unique: true
   end
 end
