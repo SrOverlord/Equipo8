@@ -26,7 +26,7 @@ module Api
     end
 end
   def showSoloID
-    @cuenta_banca = CuentaBanca.where(user_id: params[:id], id: params[:user_id])
+    @cuenta_banca = CuentaBanca.where( id: params[:user_id])
 
 
       if (@cuenta_banca!=nil)
