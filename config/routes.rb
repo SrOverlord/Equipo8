@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   
   root 'main#home'
 
-  get '/vista', to: 'Cripto#criptoVista', as: 'screencripto'
+  get '/vista', to: 'cripto#criptoVista', as: 'screencripto'
   
   namespace :api, defaults: { format: 'json' }  do
     namespace :v1 do
