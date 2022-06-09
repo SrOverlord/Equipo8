@@ -23,7 +23,7 @@
     <li><%= link_to 'Terminar Sesion', destroy_user_session_path, :method => :delete %></li>
     
     <div class= "contSaldo">
-    <h3>Saldo Cuenta Principal</h3>
+    <h3>Saldo:</h3>
     <% @cuenta = CuentaBanca.where(user_id: current_user.id ).first() %>
     <%# <% @cuenta = CuentaBanca.select(:saldo) %>
     <h3><%=  @cuenta.attributes["saldo"] %></h3>
