@@ -36,11 +36,11 @@
 
 
   </header>
-
+<% if user_signed_in? %>
   <div class= "menu">
    <li><%= link_to "CuentaBancos", :cuenta_bancas %></li>
  <li><%= link_to "Criptos",  wallet_criptos_path %></li>
-
+ <% end %>
     <body>
   </div>
    <p class="notice"><%= notice %></p>
