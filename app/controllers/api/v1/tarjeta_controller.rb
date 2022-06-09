@@ -1,9 +1,12 @@
 module Api
   module V1
 class TarjetaController < ApplicationController
-  before_action :set_tarjetum, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
+
   def show
-    @tarjetum = Tarjetum.find_by(id: params[:id])
+    # Modificado el show para mostrar con el usuario gracias a ID
+    # Ahora hace la consulta por medio de Id de la tarjeta con IdUsuario = Id
+    @tarjetum = Tarjetum.where(idUsuario: params[:id])
     if (@tarjetum!=nil)
       render json: @tarjetum, status: :ok
 else
