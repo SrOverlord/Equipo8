@@ -39,7 +39,7 @@ class WalletCriptosController < ApplicationController
       @cuentaaux = CuentaBanca.where(user_id: current_user.id ).first() 
       @cuentaaux.attributes["saldo"];
       # Moficamos y sumamos o restamos el valor 
-      @cuenta.update saldo:  (@cuentaaux.attributes["saldo"].to_f + @wallet_cripto.valor.to_f);;
+      @cuenta.update saldo:  (@cuentaaux.attributes["saldo"].to_f - @wallet_cripto.valor.to_f);;
   
   end
 

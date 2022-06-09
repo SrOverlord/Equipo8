@@ -76,13 +76,21 @@ color: orange
 
 .flex div{
    width: 200px;
-   height: 100px;
+   height: 125px;
    border-radius: 1em;
    border: 5px solid orange;
    /* background-color: aqua; */
    text-align: center;
    font-weight: 500%;
    font-size: 20px;
+   background-color: white;
+   color: black;
+}
+#criptos div{
+    border-radius: 1em;
+    width: 100%;
+    background-color: whitesmoke;
+    color:black;
 }
 
 * {
