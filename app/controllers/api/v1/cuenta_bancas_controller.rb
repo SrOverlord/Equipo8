@@ -29,7 +29,6 @@ end
   def showSoloID
     @cuenta_banca = CuentaBanca.where( id: params[:id])
 
-
       if (@cuenta_banca!=nil)
         render json: @cuenta_banca, status: :ok
   else
