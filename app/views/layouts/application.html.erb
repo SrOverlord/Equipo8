@@ -10,9 +10,6 @@
     <%= javascript_importmap_tags %>
   </head>
 
-    <body>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
 
   <header class="ContMenu" >
 
@@ -44,6 +41,9 @@
    <li><%= link_to "CuentaBancos", :cuenta_bancas %></li>
  <li><%= link_to "Criptos",  wallet_criptos_path %></li>
 
+    <body>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
   </div>
     
     <%= yield %>
