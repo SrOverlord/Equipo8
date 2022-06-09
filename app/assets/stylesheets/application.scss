@@ -91,6 +91,10 @@ color: orange
      text-decoration: none;
 }
 
+.flex li{
+    list-style: none;
+}
+
 
 #criptos div{
     border-radius: 1em;
@@ -100,11 +104,13 @@ justify-content: center;
     height: 200;
     background-color: whitesmoke;
     color:black;
+    padding: 1em;
 }
 
 .hueco{
-    height: 50;
+    height: 100;
 }
+
 * {
     margin: 0;
     padding: 0;
