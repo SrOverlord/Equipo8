@@ -25,13 +25,22 @@ class WalletCriptosController < ApplicationController
 
     respond_to do |format|
       if @wallet_cripto.save
-        format.html { redirect_to wallet_cripto_url(@wallet_cripto), notice: "Wallet cripto was successfully created." }
+        format.html { redirect_to screencripto_path, notice: "Wallet cripto was successfully created." }
         format.json { render :show, status: :created, location: @wallet_cripto }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @wallet_cripto.errors, status: :unprocessable_entity }
       end
     end
+
+      # Moficiamos el valor saldo de la cuenta
+
+      @cuenta = CuentaBanca.where(user_id: current_user.id ).first()
+      @cuentaaux = CuentaBanca.where(user_id: current_user.id ).first() 
+      @cuentaaux.attributes["saldo"];
+      # Moficamos y sumamos o restamos el valor 
+      @cuenta.update saldo:  (@cuentaaux.attributes["saldo"].to_f + @wallet_cripto.valor.to_f);;
+  
   end
 
   # PATCH/PUT /wallet_criptos/1 or /wallet_criptos/1.json

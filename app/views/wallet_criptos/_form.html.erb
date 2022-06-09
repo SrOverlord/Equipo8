@@ -12,13 +12,13 @@
   <% end %>
 
   <div>
-    <%= form.label :nombre, style: "display: block" %>
-    <%= form.text_field :nombre %>
+    <%= form.label :nombre, style: "display: block" %> <p> <%= @nombre%> </p>
+    <%= form.text_field :nombre , value: @nombre, type: :hidden %>
   </div>
 
   <div>
-    <%= form.label :valor, style: "display: block" %>
-    <%= form.text_field :valor %>
+    <%= form.label :valor, style: "display: block" %><p> <%= @valor%> </p>
+    <%= form.text_field :valor , value: @valor , type: :hidden %>
   </div>
 
   <div>
