@@ -65,6 +65,6 @@ class TarjetaController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tarjetum_params
-      params.require(:tarjetum).permit(:titular, :numero, :cvc, :fechaCaducidad, :idCuenta)
+      params.require(:tarjetum).permit(:titular, :numero, :cvc, :fechacaducidad, :idCuenta, :idUsuario)
     end
 end

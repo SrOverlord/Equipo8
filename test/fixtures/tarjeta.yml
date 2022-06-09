@@ -2,14 +2,16 @@
 
 one:
   titular: MyString
-  numero: 1
-  cvc: 1
-  fechaCaducidad: MyString
-  idCuenta: 1
+  numero: MyString
+  cvc: MyString
+  fechacaducidad: MyString
+  idCuenta: MyString
+  idUsuario: MyString
 
 two:
   titular: MyString
-  numero: 1
-  cvc: 1
-  fechaCaducidad: MyString
-  idCuenta: 1
+  numero: MyString
+  cvc: MyString
+  fechacaducidad: MyString
+  idCuenta: MyString
+  idUsuario: MyString

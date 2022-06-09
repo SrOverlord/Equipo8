@@ -18,22 +18,27 @@
 
   <div>
     <%= form.label :numero, style: "display: block" %>
-    <%= form.number_field :numero %>
+    <%= form.text_field :numero %>
   </div>
 
   <div>
     <%= form.label :cvc, style: "display: block" %>
-    <%= form.number_field :cvc %>
+    <%= form.text_field :cvc %>
   </div>
 
   <div>
-    <%= form.label :fechaCaducidad, style: "display: block" %>
-    <%= form.text_field :fechaCaducidad %>
+    <%= form.label :fechacaducidad, style: "display: block" %>
+    <%= form.text_field :fechacaducidad %>
   </div>
 
   <div>
     <%= form.label :idCuenta, style: "display: block" %>
-    <%= form.number_field :idCuenta %>
+    <%= form.text_field :idCuenta %>
+  </div>
+
+  <div>
+    <%= form.label :idUsuario, style: "display: block" %>
+    <%= form.text_field :idUsuario %>
   </div>
 
   <div>

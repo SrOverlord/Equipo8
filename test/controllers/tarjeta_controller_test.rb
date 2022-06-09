@@ -17,7 +17,7 @@ class TarjetaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create tarjetum" do
     assert_difference("Tarjetum.count") do
-      post tarjeta_url, params: { tarjetum: { cvc: @tarjetum.cvc, fechaCaducidad: @tarjetum.fechaCaducidad, idCuenta: @tarjetum.idCuenta, numero: @tarjetum.numero, titular: @tarjetum.titular } }
+      post tarjeta_url, params: { tarjetum: { cvc: @tarjetum.cvc, fechacaducidad: @tarjetum.fechacaducidad, idCuenta: @tarjetum.idCuenta, idUsuario: @tarjetum.idUsuario, numero: @tarjetum.numero, titular: @tarjetum.titular } }
     end
 
     assert_redirected_to tarjetum_url(Tarjetum.last)
@@ -34,7 +34,7 @@ class TarjetaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update tarjetum" do
-    patch tarjetum_url(@tarjetum), params: { tarjetum: { cvc: @tarjetum.cvc, fechaCaducidad: @tarjetum.fechaCaducidad, idCuenta: @tarjetum.idCuenta, numero: @tarjetum.numero, titular: @tarjetum.titular } }
+    patch tarjetum_url(@tarjetum), params: { tarjetum: { cvc: @tarjetum.cvc, fechacaducidad: @tarjetum.fechacaducidad, idCuenta: @tarjetum.idCuenta, idUsuario: @tarjetum.idUsuario, numero: @tarjetum.numero, titular: @tarjetum.titular } }
     assert_redirected_to tarjetum_url(@tarjetum)
   end
 

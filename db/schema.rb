@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_08_231016) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_09_005603) do
   create_table "cuenta_bancas", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "user_id"
     t.string "numeroCuenta"
-    t.float "saldo"
+    t.string "saldo"
     t.string "tipo"
-    t.float "comision"
+    t.string "comision"
     t.string "divisa"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,14 +61,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_08_231016) do
 
   create_table "tarjeta", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "titular"
-    t.integer "numero"
-    t.integer "cvc"
-    t.string "fechaCaducidad"
-    t.integer "idCuenta"
+    t.string "numero"
+    t.string "cvc"
+    t.string "fechacaducidad"
+    t.string "idCuenta"
+    t.string "idUsuario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["idCuenta"], name: "index_tarjeta_on_idCuenta", unique: true
-    t.index ["numero"], name: "index_tarjeta_on_numero", unique: true
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
