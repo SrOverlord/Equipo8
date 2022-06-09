@@ -1,0 +1,27 @@
+<%= form_with(model: wallet_cripto) do |form| %>
+  <% if wallet_cripto.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(wallet_cripto.errors.count, "error") %> prohibited this wallet_cripto from being saved:</h2>
+
+      <ul>
+        <% wallet_cripto.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre, style: "display: block" %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div>
+    <%= form.label :valor, style: "display: block" %>
+    <%= form.text_field :valor %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+module WalletCriptosHelper
+end

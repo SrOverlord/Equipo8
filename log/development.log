@@ -2300,3 +2300,2292 @@ Migrating to CreateTarjeta (20220609005603)
   [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('4491851986297462290')[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 00:58:10 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 6.1ms | Allocations: 1637)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 00:58:10 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 16ms (Views: 10.6ms | ActiveRecord: 3.8ms | Allocations: 2951)
+
+
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1/15/" for 85.136.44.215 at 2022-06-09 00:58:18 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/cuenta_bancas/1/15"):
+  
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 01:04:02 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 10.2ms | Allocations: 3574)
+
+
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.50.114 at 2022-06-09 01:04:12 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:15:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.2ms | Allocations: 1546)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 01:04:14 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 18ms (Views: 0.9ms | ActiveRecord: 12.9ms | Allocations: 3978)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:04:19 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 7.1ms | Allocations: 2956)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 01:04:19 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1613)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:04:19 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.3ms | Allocations: 926)
+
+
+Started GET "/DS1_8/" for 85.136.50.114 at 2022-06-09 01:04:22 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#home as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering main/home.html.erb within layouts/application
+  Rendered main/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 360)
+  Rendered layout layouts/application.html.erb (Duration: 104.1ms | Allocations: 38347)
+Completed 200 OK in 119ms (Views: 106.3ms | ActiveRecord: 1.6ms | Allocations: 42450)
+
+
+Started GET "/DS1_8/tarjeta" for 85.136.50.114 at 2022-06-09 01:04:24 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TarjetaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tarjeta/index.html.erb within layouts/application
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/views/tarjeta/index.html.erb:6
+  Rendered tarjeta/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1827)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5225)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 2.6ms | Allocations: 6093)
+
+
+Started GET "/DS1_8/tarjeta/new" for 85.136.50.114 at 2022-06-09 01:04:25 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TarjetaController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tarjeta/new.html.erb within layouts/application
+  Rendered tarjeta/_form.html.erb (Duration: 13.6ms | Allocations: 4889)
+  Rendered tarjeta/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 5207)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 8584)
+Completed 200 OK in 64ms (Views: 40.6ms | ActiveRecord: 7.5ms | Allocations: 12772)
+
+
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:04:27 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#update as JSON
+  Parameters: {"saldo"=>"1000.0", "id"=>"1", "cuenta_banca"=>{"saldo"=>"1000.0"}}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:34:in `update'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.2ms | Allocations: 1468)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find CuentaBanca with 'id'=1):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:34:in `update'
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 01:04:30 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.5ms | Allocations: 793)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:04:33 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.2ms | Allocations: 915)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:04:33 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1551)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started POST "/DS1_8/tarjeta" for 85.136.50.114 at 2022-06-09 01:04:35 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TarjetaController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "tarjetum"=>{"titular"=>"asdasdasd", "numero"=>"asfasdf", "cvc"=>"adfasdf", "fechacaducidad"=>"adsfasdf", "idCuenta"=>"adsfadsf", "idUsuario"=>"adsfasdf"}, "commit"=>"Create Tarjetum"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tarjeta_controller.rb:27:in `block in create'
+  [1m[36mTarjetum Create (1.3ms)[0m  [1m[32mINSERT INTO `tarjeta` (`titular`, `numero`, `cvc`, `fechacaducidad`, `idCuenta`, `idUsuario`, `created_at`, `updated_at`) VALUES ('asdasdasd', 'asfasdf', 'adfasdf', 'adsfasdf', 'adsfadsf', 'adsfasdf', '2022-06-09 01:04:35.410394', '2022-06-09 01:04:35.410394')[0m
+  ↳ app/controllers/tarjeta_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (69.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tarjeta_controller.rb:27:in `block in create'
+Redirected to https://clados.ugr.es/DS1_8/tarjeta/1
+Completed 302 Found in 84ms (ActiveRecord: 72.0ms | Allocations: 4340)
+
+
+Started GET "/DS1_8/tarjeta/1" for 85.136.50.114 at 2022-06-09 01:04:35 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TarjetaController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/tarjeta_controller.rb:63:in `set_tarjetum'
+  Rendering layout layouts/application.html.erb
+  Rendering tarjeta/show.html.erb within layouts/application
+  Rendered tarjeta/_tarjetum.html.erb (Duration: 0.8ms | Allocations: 335)
+  Rendered tarjeta/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2148)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5508)
+Completed 200 OK in 21ms (Views: 14.2ms | ActiveRecord: 2.3ms | Allocations: 7139)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1/15/" for 85.136.44.215 at 2022-06-09 01:04:46 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#showID as JSON
+  Parameters: {"id"=>"1", "user_id"=>"15"}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1 AND `cuenta_bancas`.`id` = 15[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:23:in `showID'
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.6ms | Allocations: 995)
+
+
+Started GET "/DS1_8/api/v1/tarejat" for 85.136.50.114 at 2022-06-09 01:04:48 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarejat"):
+  
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.50.114 at 2022-06-09 01:04:54 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:15:in `index'
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.4ms | Allocations: 901)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.50.114 at 2022-06-09 01:04:57 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:51:in `set_tarjetum'
+  [1m[36mCACHE Tarjetum Load (0.0ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:6:in `show'
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 1728)
+
+
+Started POST "/DS1_8/api/v1/cuenta_bancas/" for 37.130.149.155 at 2022-06-09 01:05:01 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#create as JSON
+  Parameters: {"user_id"=>"1", "numeroCuenta"=>"ES73 1224 6879", "saldo"=>"0.0", "tipo"=>"plata", "comision"=>"0.05", "divisa"=>"€", "cuenta_banca"=>{"user_id"=>"1", "numeroCuenta"=>"ES73 1224 6879", "saldo"=>"0.0", "tipo"=>"plata", "comision"=>"0.05", "divisa"=>"€"}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:46:in `create'
+  [1m[36mCuentaBanca Create (1.1ms)[0m  [1m[32mINSERT INTO `cuenta_bancas` (`user_id`, `numeroCuenta`, `saldo`, `tipo`, `comision`, `divisa`, `created_at`, `updated_at`) VALUES (1, 'ES73 1224 6879', '0.0', 'plata', '0.05', '€', '2022-06-09 01:05:01.102777', '2022-06-09 01:05:01.102777')[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:46:in `create'
+  [1m[36mTRANSACTION (59.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:46:in `create'
+Completed 201 Created in 70ms (Views: 0.5ms | ActiveRecord: 60.9ms | Allocations: 2294)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:05:01 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.3ms | Allocations: 1038)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:05:01 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1556)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:06:32 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 1.5ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 01:06:32 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:06:35 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.3ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 01:06:35 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:06:50 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#update as JSON
+  Parameters: {"saldo"=>"1000.0", "id"=>"1", "cuenta_banca"=>{"saldo"=>"1000.0"}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:34:in `update'
+Completed 404 Not Found in 6ms (ActiveRecord: 1.5ms | Allocations: 922)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find CuentaBanca with 'id'=1):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:34:in `update'
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 01:07:03 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:07:03 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.6ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:07:16 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.4ms | Allocations: 899)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 01:07:29 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.4ms | Allocations: 747)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:07:32 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:07:32 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:10:22 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 1.6ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 01:10:33 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:10:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:10:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.4ms | Allocations: 1038)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.50.114 at 2022-06-09 01:11:21 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+  [1m[36mCuentaBanca Load (1.1ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 2.7ms | Allocations: 2504)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.50.114 at 2022-06-09 01:11:29 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.4ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.50.114 at 2022-06-09 01:12:05 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCuentaBanca Load (1.1ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 27ms (Views: 10.7ms | ActiveRecord: 9.8ms | Allocations: 4161)
+
+
+Started GET "/DS1_8/tarjeta" for 85.136.50.114 at 2022-06-09 01:12:13 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by TarjetaController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering tarjeta/index.html.erb within layouts/application
+  [1m[36mTarjetum Load (1.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/views/tarjeta/index.html.erb:6
+  Rendered tarjeta/_tarjetum.html.erb (Duration: 0.2ms | Allocations: 65)
+  Rendered tarjeta/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 4023)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/layouts/application.html.erb:19
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 22774)
+Completed 200 OK in 82ms (Views: 60.3ms | ActiveRecord: 17.6ms | Allocations: 23889)
+
+
+Started GET "/DS1_8/api/v1/users" for 85.136.50.114 at 2022-06-09 01:12:28 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.5ms | Allocations: 1179)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.50.114 at 2022-06-09 01:12:39 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjeta/1"):
+  
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.50.114 at 2022-06-09 01:13:53 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 13ms (Views: 3.6ms | ActiveRecord: 4.7ms | Allocations: 2038)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.50.114 at 2022-06-09 01:13:58 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.4ms | Allocations: 772)
+
+
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.50.114 at 2022-06-09 01:14:02 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 18ms (Views: 10.8ms | ActiveRecord: 6.8ms | Allocations: 2694)
+
+
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.50.114 at 2022-06-09 01:14:25 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.4ms | Allocations: 873)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/adsfasdf" for 85.136.50.114 at 2022-06-09 01:14:32 +0000
+Cannot render console from 85.136.50.114! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"adsfasdf"}
+  [1m[36mTarjetum Load (1.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = 'adsfasdf'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 1.5ms | Allocations: 916)
+
+
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:15:15 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 11.0ms | Allocations: 3554)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 01:15:26 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 1399)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:15:28 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 7.1ms | Allocations: 3083)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:15:28 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1613)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:15:40 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#update as JSON
+  Parameters: {"saldo"=>"0.0", "id"=>"1", "cuenta_banca"=>{"saldo"=>"0.0"}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:34:in `update'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.6ms | Allocations: 1444)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find CuentaBanca with 'id'=1):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:34:in `update'
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:15:40 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:15:40 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:16:47 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 1.4ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:16:47 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1/15" for 37.130.149.155 at 2022-06-09 01:16:54 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/cuenta_bancas/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:16:54 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:16:55 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:17:39 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.4ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:17:39 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/tarjetas" for 85.136.44.215 at 2022-06-09 01:25:21 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas"):
+  
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.44.215 at 2022-06-09 01:25:25 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.3ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 2.3ms | Allocations: 1028)
+
+
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.44.215 at 2022-06-09 01:25:34 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.3ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.3ms | Allocations: 873)
+
+
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.44.215 at 2022-06-09 01:25:35 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 873)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 01:25:53 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.2ms | Allocations: 771)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 37.130.149.155 at 2022-06-09 01:25:53 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.3ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.3ms | Allocations: 767)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:25:57 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 873)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 37.130.149.155 at 2022-06-09 01:25:58 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (0.9ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 873)
+
+
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 01:26:39 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 1.2ms | Allocations: 901)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 01:26:50 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 748)
+
+
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 01:26:52 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:26:55 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.2ms | Allocations: 1164)
+
+
+Started POST "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:26:59 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#create as JSON
+  Parameters: {"titular"=>"Fran", "numero"=>"0183", "cvc"=>"540", "fechaCaducidad"=>"04/26", "idCuenta"=>15, "tarjetum"=>{"titular"=>"Fran", "numero"=>"0183", "cvc"=>"540", "idCuenta"=>15}}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+  [1m[36mTarjetum Create (1.1ms)[0m  [1m[32mINSERT INTO `tarjeta` (`titular`, `numero`, `cvc`, `fechacaducidad`, `idCuenta`, `idUsuario`, `created_at`, `updated_at`) VALUES ('Fran', '0183', '540', NULL, '15', NULL, '2022-06-09 01:26:59.825871', '2022-06-09 01:26:59.825871')[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (62.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+Completed 201 Created in 73ms (Views: 0.5ms | ActiveRecord: 64.3ms | Allocations: 2723)
+
+
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 01:26:59 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:27:00 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.2ms | Allocations: 1164)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:27:00 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:27:06 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 37.130.149.155 at 2022-06-09 01:27:10 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (25.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 31ms (Views: 4.6ms | ActiveRecord: 25.5ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:27:32 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.2ms | Allocations: 1164)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:27:32 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1/15" for 37.130.149.155 at 2022-06-09 01:27:47 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/cuenta_bancas/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:27:47 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:27:48 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.5ms | Allocations: 1164)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:31:51 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:31:52 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 1.4ms | Allocations: 1164)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:32:20 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:32:21 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.4ms | Allocations: 1164)
+
+
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1/15" for 37.130.149.155 at 2022-06-09 01:32:26 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/cuenta_bancas/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:32:26 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:32:26 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.3ms | Allocations: 1165)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1/2" for 37.130.149.155 at 2022-06-09 01:32:56 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#showID as JSON
+  Parameters: {"id"=>"1", "user_id"=>"2"}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1 AND `cuenta_bancas`.`id` = 2[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:23:in `showID'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 1.4ms | Allocations: 788)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1/15" for 37.130.149.155 at 2022-06-09 01:32:59 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#showID as JSON
+  Parameters: {"id"=>"1", "user_id"=>"15"}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1 AND `cuenta_bancas`.`id` = 15[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:23:in `showID'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.2ms | Allocations: 927)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:33:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:33:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 01:33:52 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:33:55 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.7ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.7ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 01:34:05 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started POST "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:05 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#create as JSON
+  Parameters: {"titular"=>"Fran", "numero"=>"0066", "cvc"=>"733", "fechaCaducidad"=>"04/26", "idCuenta"=>15, "idUsuario"=>1, "tarjetum"=>{"titular"=>"Fran", "numero"=>"0066", "cvc"=>"733", "idCuenta"=>15, "idUsuario"=>1}}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+  [1m[36mTarjetum Create (2.1ms)[0m  [1m[32mINSERT INTO `tarjeta` (`titular`, `numero`, `cvc`, `fechacaducidad`, `idCuenta`, `idUsuario`, `created_at`, `updated_at`) VALUES ('Fran', '0066', '733', NULL, '15', '1', '2022-06-09 01:34:05.634281', '2022-06-09 01:34:05.634281')[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (35.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 38.4ms | Allocations: 3096)
+
+
+  
+ActiveRecord::RecordNotUnique (Mysql2::Error: Duplicate entry '15' for key 'tarjeta.index_tarjeta_on_idCuenta'):
+  
+app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:13 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.2ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:15 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.4ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:15 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (0.9ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.9ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:15 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (0.9ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:15 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (0.9ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:16 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (0.9ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:16 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (0.9ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.9ms | Allocations: 994)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:34:33 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started POST "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:36 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#create as JSON
+  Parameters: {"titular"=>"Fran", "numero"=>"0575", "cvc"=>"369", "fechaCaducidad"=>"02/26", "idCuenta"=>20, "idUsuario"=>1, "tarjetum"=>{"titular"=>"Fran", "numero"=>"0575", "cvc"=>"369", "idCuenta"=>20, "idUsuario"=>1}}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+  [1m[36mTarjetum Create (1.1ms)[0m  [1m[32mINSERT INTO `tarjeta` (`titular`, `numero`, `cvc`, `fechacaducidad`, `idCuenta`, `idUsuario`, `created_at`, `updated_at`) VALUES ('Fran', '0575', '369', NULL, '20', '1', '2022-06-09 01:34:36.027068', '2022-06-09 01:34:36.027068')[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (72.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:34:in `create'
+Completed 201 Created in 83ms (Views: 0.5ms | ActiveRecord: 74.7ms | Allocations: 2100)
+
+
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 01:34:36 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 01:34:39 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.2ms | Allocations: 1121)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 01:34:44 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.5ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:35:20 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.4ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:35:40 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.3ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 01:36:04 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:36:06 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.5ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:36:06 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/1/15" for 37.130.149.155 at 2022-06-09 01:36:14 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:36:14 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:36:14 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:38:41 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.8ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 1.8ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:38:41 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 01:38:52 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 1.4ms | Allocations: 898)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 01:39:02 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:39:05 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 1.6ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:39:05 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/1/15" for 37.130.149.155 at 2022-06-09 01:39:12 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:39:12 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:39:13 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.6ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:46:48 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 2.7ms | Allocations: 1537)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:46:48 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1/15" for 37.130.149.155 at 2022-06-09 01:46:56 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#showID as JSON
+  Parameters: {"id"=>"1", "user_id"=>"15"}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1 AND `cuenta_bancas`.`id` = 15[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:23:in `showID'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.3ms | Allocations: 927)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1/15" for 37.130.149.155 at 2022-06-09 01:46:57 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#showID as JSON
+  Parameters: {"id"=>"1", "user_id"=>"15"}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1 AND `cuenta_bancas`.`id` = 15[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:23:in `showID'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.2ms | Allocations: 927)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/" for 37.130.149.155 at 2022-06-09 01:47:01 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Completed 200 OK in 12ms (Views: 2.8ms | ActiveRecord: 2.6ms | Allocations: 2717)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/" for 85.136.44.215 at 2022-06-09 01:52:21 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Completed 200 OK in 29ms (Views: 5.0ms | ActiveRecord: 3.6ms | Allocations: 2436)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 01:52:29 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mCuentaBanca Load (1.2ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.2ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/15" for 85.136.44.215 at 2022-06-09 01:52:34 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 15[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.3ms | Allocations: 768)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/" for 85.136.44.215 at 2022-06-09 01:52:36 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 2.8ms | Allocations: 2328)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1/15" for 85.136.44.215 at 2022-06-09 01:52:58 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#showID as JSON
+  Parameters: {"id"=>"1", "user_id"=>"15"}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1 AND `cuenta_bancas`.`id` = 15[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:23:in `showID'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.3ms | Allocations: 927)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:55:45 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.5ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:55:45 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:56:19 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:56:19 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:56:39 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:56:40 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.6ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 01:57:50 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 01:57:50 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/1/15" for 37.130.149.155 at 2022-06-09 01:57:58 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:03:16 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 2.5ms | Allocations: 1537)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:03:16 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/tarjeta" for 85.136.44.215 at 2022-06-09 02:03:28 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.5ms | Allocations: 1121)
+
+
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 02:03:30 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.8ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 02:03:43 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.4ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:03:45 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.5ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:03:45 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/1/15" for 37.130.149.155 at 2022-06-09 02:03:51 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:05:16 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:05:17 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:06:21 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:06:21 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:06:41 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:06:41 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/users/" for 37.130.149.155 at 2022-06-09 02:06:50 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 1.4ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 37.130.149.155 at 2022-06-09 02:07:00 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 1.5ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:07:01 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:07:01 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:07:14 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:07:15 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (2.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 2.6ms | Allocations: 1419)
+
+
+Started PUT "/DS1_8/api/v1/1/19" for 37.130.149.155 at 2022-06-09 02:07:54 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/19"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:07:54 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:07:55 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 1.6ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 02:23:27 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 2.7ms | Allocations: 1015)
+
+
+Started GET "/DS1_8/api/v1/users/0" for 85.136.44.215 at 2022-06-09 02:23:42 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"0", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 404 Not Found in 5ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 597)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 02:23:58 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 2.2ms | ActiveRecord: 1.5ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 02:24:00 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 02:24:01 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started PUT "/DS1_8/api/v1/1/15" for 37.130.149.155 at 2022-06-09 02:25:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:25:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.6ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 1.6ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:25:36 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 02:28:59 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 37.130.149.155 at 2022-06-09 02:50:03 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.5ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 2.5ms | Allocations: 1537)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 37.130.149.155 at 2022-06-09 02:50:03 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started PUT "/DS1_8/api/v1/1/15" for 37.130.149.155 at 2022-06-09 02:50:11 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/1/15"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/" for 37.130.149.155 at 2022-06-09 02:50:40 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Completed 200 OK in 13ms (Views: 5.0ms | ActiveRecord: 2.8ms | Allocations: 2599)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/" for 37.130.149.155 at 2022-06-09 02:50:42 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 2.7ms | Allocations: 2606)
+
+
+Started GET "/DS1_8/" for 37.130.149.155 at 2022-06-09 02:50:45 +0000
+Cannot render console from 37.130.149.155! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#home as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering main/home.html.erb within layouts/application
+  Rendered main/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 156)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 14751)
+Completed 200 OK in 45ms (Views: 32.1ms | ActiveRecord: 1.3ms | Allocations: 17940)
+
+
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 03:11:12 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 2.6ms | Allocations: 1160)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 03:11:43 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 761)
+
+
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:11:45 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:12:43 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:13:33 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:14:32 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:15:04 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:15:26 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjetas/1" for 85.136.44.215 at 2022-06-09 03:15:40 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/tarjetas/1"):
+  
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:16:05 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1", "tarjetum"=>{}}
+  [1m[36mTarjetum Load (1.6ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 1.6ms | Allocations: 945)
+
+
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 03:16:30 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 03:17:06 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 1.4ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:17:08 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1", "tarjetum"=>{}}
+  [1m[36mTarjetum Load (1.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.5ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:17:21 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 1.4ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/" for 85.136.44.215 at 2022-06-09 03:17:26 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#index as JSON
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta`[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.4ms | Allocations: 1122)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:17:30 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.3ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:18:23 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1", "tarjetum"=>{}}
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 1.4ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:18:26 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTarjetum Load (1.1ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.1ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:28:35 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1", "tarjetum"=>{}}
+  [1m[36mTarjetum Load (1.2ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 2.2ms | Allocations: 1028)
+
+
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 03:29:06 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.5ms | Allocations: 897)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 03:29:19 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 746)
+
+
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 03:29:20 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1", "tarjetum"=>{}}
+  [1m[36mTarjetum Load (1.4ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.4ms | Allocations: 910)
+
+
+Started GET "/DS1_8/api/v1/users/" for 85.136.44.215 at 2022-06-09 07:38:02 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `index'
+Completed 200 OK in 18ms (Views: 17.4ms | ActiveRecord: 2.4ms | Allocations: 1015)
+
+
+Started GET "/DS1_8/api/v1/users/1" for 85.136.44.215 at 2022-06-09 07:38:21 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/users_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 745)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 07:38:23 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1558)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 07:38:23 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 1420)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 07:39:19 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.4ms | Allocations: 1419)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 07:39:19 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 07:40:29 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 07:40:29 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.3ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.3ms | Allocations: 1037)
+
+
+Started PUT "/DS1_8/api/v1/cuenta_bancas/1/19" for 85.136.44.215 at 2022-06-09 07:40:46 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [PUT] "/api/v1/cuenta_bancas/1/19"):
+  
+Started GET "/DS1_8/api/v1/cuenta_bancas/1" for 85.136.44.215 at 2022-06-09 07:41:09 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#show as JSON
+  Parameters: {"id"=>"1", "cuenta_banca"=>{}}
+  [1m[36mCuentaBanca Load (1.4ms)[0m  [1m[34mSELECT `cuenta_bancas`.* FROM `cuenta_bancas` WHERE `cuenta_bancas`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/cuenta_bancas_controller.rb:12:in `show'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 1.4ms | Allocations: 1037)
+
+
+Started GET "/DS1_8/api/v1/cuenta_bancas" for 85.136.44.215 at 2022-06-09 07:41:09 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::CuentaBancasController#index as JSON
+  Parameters: {"cuenta_banca"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass
+
+          render json: CuentaBanca.where(user_id: current_user.id), status: :ok
+                                                              ^^^):
+  
+app/controllers/api/v1/cuenta_bancas_controller.rb:30:in `index'
+Started GET "/DS1_8/api/v1/tarjeta/1" for 85.136.44.215 at 2022-06-09 07:41:11 +0000
+Cannot render console from 85.136.44.215! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TarjetaController#show as JSON
+  Parameters: {"id"=>"1", "tarjetum"=>{}}
+  [1m[36mTarjetum Load (1.5ms)[0m  [1m[34mSELECT `tarjeta`.* FROM `tarjeta` WHERE `tarjeta`.`idUsuario` = '1'[0m
+  ↳ app/controllers/api/v1/tarjeta_controller.rb:11:in `show'
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.5ms | Allocations: 910)
+
+
+Started GET "/DS1_8/" for 87.125.206.182 at 2022-06-09 07:47:40 +0000
+Cannot render console from 87.125.206.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MainController#home as HTML
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.0ms | Allocations: 2746)
+
+
+Started GET "/DS1_8/" for 92.57.75.136 at 2022-06-09 07:47:40 +0000
+Cannot render console from 92.57.75.136! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by MainController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 510)
+
+
+Started GET "/DS1_8/users/sign_in" for 87.125.206.182 at 2022-06-09 07:47:40 +0000
+Cannot render console from 87.125.206.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 755)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 3896)
+  Rendered layout layouts/application.html.erb (Duration: 154.8ms | Allocations: 41720)
+Completed 200 OK in 199ms (Views: 161.8ms | ActiveRecord: 11.1ms | Allocations: 52509)
+
+
+Started GET "/DS1_8/users/sign_in" for 92.57.75.136 at 2022-06-09 07:47:40 +0000
+Cannot render console from 92.57.75.136! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 141)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1252)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3616)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 4575)
+
+
+Started GET "/DS1_8/users" for 87.125.206.182 at 2022-06-09 07:47:53 +0000
+Cannot render console from 87.125.206.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (uninitialized constant UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/DS1_8/cripto" for 87.125.206.182 at 2022-06-09 07:48:32 +0000
+Cannot render console from 87.125.206.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220609074829_create_wallet_criptos.rb
+
+
+):
+  
+activerecord (7.0.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.3) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.3) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+/usr/lib/ruby/vendor_ruby/phusion_passenger/rack/thread_handler_extension.rb:107:in `process_request'
+/usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:149:in `accept_and_process_next_request'
+/usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler/thread_handler.rb:110:in `main_loop'
+/usr/lib/ruby/vendor_ruby/phusion_passenger/request_handler.rb:419:in `block (3 levels) in start_threads'
+/usr/lib/ruby/vendor_ruby/phusion_passenger/utils.rb:113:in `block in create_thread_and_abort_on_exception'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('4491851986297462290', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateWalletCriptos (20220609074829)
+  [1m[35m (698.7ms)[0m  [1m[35mCREATE TABLE `wallet_criptos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `valor` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220609074829')[0m
+  [1m[36mTRANSACTION (81.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('4491851986297462290')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/DS1_8/cripto/criptoVista" for 87.125.206.182 at 2022-06-09 07:48:54 +0000
+Cannot render console from 87.125.206.182! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CriptoController#criptoVista as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cripto/criptoVista.html.erb within layouts/application
+  Rendered cripto/criptoVista.html.erb within layouts/application (Duration: 0.6ms | Allocations: 150)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 15569)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 16558)
+
+

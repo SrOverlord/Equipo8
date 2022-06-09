@@ -1,0 +1,2 @@
+class WalletCripto < ApplicationRecord
+end

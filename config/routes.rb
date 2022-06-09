@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :wallet_criptos
+  get 'cripto/criptoVista'
   resources :tarjeta
   resources :cuenta_bancas
   devise_for :users

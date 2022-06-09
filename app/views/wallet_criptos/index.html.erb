@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Wallet criptos</h1>
+
+<div id="wallet_criptos">
+  <% @wallet_criptos.each do |wallet_cripto| %>
+    <%= render wallet_cripto %>
+    <p>
+      <%= link_to "Show this wallet cripto", wallet_cripto %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New wallet cripto", new_wallet_cripto_path %>
