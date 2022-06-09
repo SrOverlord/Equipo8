@@ -10,20 +10,42 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+    <body>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
 
-  <div class="ContMenu" >
+  <header class="ContMenu" >
 
+    <div class="contLogo">
+      <h1>Home Bank</h1>
+
+    </div>
+
+    <div class="contSesion">
     <% if user_signed_in? %>
     <li><%= link_to 'Terminar Sesion', destroy_user_session_path, :method => :delete %></li>
+    
+    <div class= "contSaldo">
+    <h3>Saldo Cuenta Principal</h3> <br>
+    <% @cuenta = CuentaBanca.where(user_id: current_user.id ).first() %>
+    <%# <% @cuenta = CuentaBanca.select(:saldo) %>
+    <%=  @cuenta.attributes["saldo"] %>
+    <%# <%= render @valor%> 
+    </div>
     <% else %>
-    <li><%= link_to 'Iniciar sesion ', new_user_session_path %></li>
+    <li><%= link_to 'Iniciar sesion ', new_user_session_apth %></li>
     <% end %>
+    </div>
+
+
+  </header>
+
+  <div class= "menu">
+   <li><%= link_to "CuentaBancos", :cuenta_bancas %></li>
+ <li><%= link_to "pruebaViata",  criptos_path %></li>
 
   </div>
-
+    
     <%= yield %>
   </body>
 </html>
