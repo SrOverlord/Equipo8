@@ -26,7 +26,7 @@
     <h3>Saldo Cuenta Principal</h3>
     <% @cuenta = CuentaBanca.where(user_id: current_user.id ).first() %>
     <%# <% @cuenta = CuentaBanca.select(:saldo) %>
-    <h2><%=  @cuenta.attributes["saldo"] %></h2>
+    <h3><%=  @cuenta.attributes["saldo"] %></h3>
     <%# <%= render @valor%> 
     </div>
     <% else %>
