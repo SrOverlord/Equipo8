@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       resources :tarjeta
       resources :cuenta_bancas
       get '/cuenta_bancas/:id/:user_id', to: 'cuenta_bancas#showID', as: 'cuenta'
-      get '/cuenta_bancas/:id/showid', to: 'cuenta_bancas#showSoloID', as: 'cuentaID'
+      get '/cuenta_bancas/showid/:id', to: 'cuenta_bancas#showSoloID', as: 'cuentaID'
       
         # get '/cuenta_banca/:id(.:format)/:user_id(.:format)'  => 'cuenta_bancas#showID' , as: 'get_cuenta_id'
      resources :users
