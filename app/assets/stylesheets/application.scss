@@ -24,6 +24,8 @@ header{
 
 
 .contSesion{
+    display: flex;
+    flex-direction: row;
     padding-top:1em ;
    list-style: none;
    text-decoration: none;
