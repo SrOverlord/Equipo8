@@ -22,7 +22,7 @@
     <% if user_signed_in? %>
     
     <div class= "contSaldo">
-    <h3>Saldo:</h3>
+    <h3>Saldo Principal:</h3>
     <% @cuenta = CuentaBanca.where(user_id: current_user.id ).first() %>
     <%# <% @cuenta = CuentaBanca.select(:saldo) %>
     <h3><%=  @cuenta.attributes["saldo"] %></h3>
