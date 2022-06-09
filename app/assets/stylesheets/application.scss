@@ -94,13 +94,16 @@ color: orange
     border-radius: 1em;
     width: 100%;
     text-align: center;
-    padding-left: 5em;
-    padding-right: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
     height: 200;
     background-color: whitesmoke;
     color:black;
 }
 
+.hueco{
+    height: 50;
+}
 * {
     margin: 0;
     padding: 0;
