@@ -25,6 +25,7 @@ module Api
        render json: :nothing, status: :not_found
     end
 end
+
   def showSoloID
     @cuenta_banca = CuentaBanca.where( id: params[:id])
 
